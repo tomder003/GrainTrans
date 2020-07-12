@@ -42,4 +42,10 @@ public class Pojazdy {
     private LocalDateTime przeglad;
     @Column(name = "licznik_km")
     private double licznikKm;
+
+    @Override
+    public String toString()
+    {
+        return nrRejestracyjny;
+    }
 }

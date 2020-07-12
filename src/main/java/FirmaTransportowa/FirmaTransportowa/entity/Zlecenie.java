@@ -58,7 +58,7 @@ public class Zlecenie {
 
     @Override
     public String toString() {
-        return "Ładunek: "+getLadunek().getLadunek()+"\nKierowca: "+getKierowca().toString()+"\nPojazd:"+getPojazd().getNrRejestracyjny();
+        return "Ładunek: "+getLadunek().getLadunek()+"\nKierowca: "+getKierowca().toString()+"\nPojazd:"+getPojazd().getNrRejestracyjny()+"\nTrasa: "+trasa.toString()+"\nzaladunek: "+dataZaladunku.toString();
     }
     
     

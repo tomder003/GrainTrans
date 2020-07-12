@@ -20,6 +20,7 @@ import FirmaTransportowa.FirmaTransportowa.repository.UzytkownikRepository;
 import FirmaTransportowa.FirmaTransportowa.repository.ZlecenieRepository;
 import java.time.LocalDateTime;
 import java.time.Month;
+import java.util.List;
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -106,5 +107,10 @@ public class UzytkownikService {
 
     public Kierowcy getKierowcaByLogin(String login) {
         return kierowcyRepository.findAll().stream().filter(k -> k.getUzytkownik().getLogin().equals(login)).findFirst().get();
+    }
+
+    public List<Uzytkownik> findAll()
+    {
+        return uzytkownikRepository.findAll();
     }
 }
